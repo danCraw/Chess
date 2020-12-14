@@ -1,27 +1,35 @@
 package kurs2.oop.task17.service;
 
 import kurs2.oop.task17.Direction;
+import kurs2.oop.task17.Graph;
 import kurs2.oop.task17.GroveType;
 import kurs2.oop.task17.Node;
 
 public class DrawService {
 
+    GameFieldService gf = GameFieldService.getGameFieldService();
+    Graph graph = gf.getGraph();
+
     public void drawWarZone(GameFieldService gf) {
-        Node currentNode = gf.getNodes().get(0).get(0);
-        Node startNode = gf.getNodes().get(0).get(0);
+        Node currentNode = graph.getNodes().get(0).get(0);
+        Node startNode = graph.getNodes().get(0).get(0);
         while (startNode != null) {
             while (currentNode.getNeighbors().get(Direction.right) != null) {
-                if (currentNode.getGroveType() == GroveType.see) {
-                    printSee(gf, currentNode);
+                if (currentNode.getNodeX() == 0 || currentNode.getNodeY() == 0) {
+                    drawAsix(currentNode);
                 } else {
-                    if (currentNode.getGroveType() == GroveType.earth) {
-                        printEarth(gf, currentNode);
+                    if (currentNode.getGroveType() == GroveType.see) {
+                        printSee(gf, currentNode);
                     } else {
-                        if (currentNode.getGroveType() == GroveType.river) {
-                            printRiver(gf, currentNode);
+                        if (currentNode.getGroveType() == GroveType.earth) {
+                            printEarth(gf, currentNode);
                         } else {
-                            if (currentNode.getGroveType() == GroveType.riverCross) {
-                                printRiverCross(gf, currentNode);
+                            if (currentNode.getGroveType() == GroveType.river) {
+                                printRiver(gf, currentNode);
+                            } else {
+                                if (currentNode.getGroveType() == GroveType.riverCross) {
+                                    printRiverCross(gf, currentNode);
+                                }
                             }
                         }
                     }
@@ -33,6 +41,25 @@ public class DrawService {
             System.out.println();
         }
     }
+
+    private void drawAsix(Node node) {
+      int x = node.getNodeX();
+      int y = node.getNodeY();
+        if (x == 0 && y == 0) {
+            System.out.print("     ");
+        }   else {
+            if(x== 0 && y!= 0){
+                if (y < 10) {
+                    System.out.print("|" + (y) + "| ");
+                } else {
+                    System.out.print("|" + (y) + "|");
+                }
+            }else{
+//                System.out.print("| "+ (x) + "  |  ");
+            }
+        }
+    }
+
 
     private void printRiverCross(GameFieldService gf, Node node) {
         if (gf.getNodeToUnitMap().get(node) != null) {
@@ -54,7 +81,7 @@ public class DrawService {
         if (gf.getNodeToUnitMap().get(node) != null) {
             drawUnit(gf, node);
         } else {
-            System.out.print((char) 27 + "[30m |" + " \uD83C\uDF2B " + "| " + (char) 27 + "[0m");
+            System.out.print(" |" + " \uD83C\uDF2B " + "| ");
         }
     }
 
@@ -77,11 +104,11 @@ public class DrawService {
     }
 
     private void drawRedUnit(GameFieldService gf, Node node) {
-        System.out.print((char) 27 + "[31m | " + gf.getNodeToUnitMap().get(node).getSymbol() + " | " + (char) 27 + "[0m");
+        System.out.print((char) 27 + "[31m | " + gf.getNodeToUnitMap().get(node).getUnitType().getSymbol() + " | " + (char) 27 + "[0m");
     }
 
     private void printBlueUnit(GameFieldService gf, Node node) {
-        System.out.print((char) 27 + "[32m | " + gf.getNodeToUnitMap().get(node).getSymbol() + " | " + (char) 27 + "[0m");
+        System.out.print((char) 27 + "[32m | " + gf.getNodeToUnitMap().get(node).getUnitType().getSymbol() + " | " + (char) 27 + "[0m");
     }
 
     private void drawUI() {

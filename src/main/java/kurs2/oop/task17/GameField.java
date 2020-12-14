@@ -1,7 +1,5 @@
 package kurs2.oop.task17;
 
-import kurs2.oop.task17.figure.*;
-
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.LinkedList;
@@ -9,7 +7,7 @@ import java.util.Map;
 
 public class GameField {
 
-    GameField gf = this;
+   private GameField gf = this;
 
     private Map<Node, Unit> nodeToUnitMap = new HashMap<>();
     private Map<Unit, Node> unitToNodeMap = new HashMap<>();

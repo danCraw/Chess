@@ -3,7 +3,7 @@ package kurs2.oop.task17;
 import java.util.ArrayList;
 
 public class Unit {
-    private  Unit unit = this;
+    private Unit unit = this;
     private String symbol;
     private int steps;
     private int attack;
@@ -12,13 +12,11 @@ public class Unit {
     private Node currentNode;
     private UnitType unitType;
 
-    public Unit(Node currentNode) {
+    public Unit(Node currentNode, UnitType unitType) {
         this.currentNode = currentNode;
+        this.unitType = unitType;
     }
 
-    public int getSteps() {
-        return steps;
-    }
 
     public void setUnitType(UnitType unitType) { this.unitType = unitType; }
 
@@ -34,16 +32,8 @@ public class Unit {
         this.allowedGrove = allowedGrove;
     }
 
-    public void setAllowedDirection(ArrayList<Direction> allowedDirection) {
-        this.allowedDirection = allowedDirection;
-    }
-
     public void setCurrentNode(Node currentNode) {
         this.currentNode = currentNode;
-    }
-
-    public int getAttack() {
-        return attack;
     }
 
     public UnitType getUnitType() {
@@ -52,18 +42,6 @@ public class Unit {
 
     public void setSymbol(String symbol) {
         this.symbol = symbol;
-    }
-
-    public String getSymbol() {
-        return symbol;
-    }
-
-    public ArrayList<GroveType> getAllowedGrove() {
-        return allowedGrove;
-    }
-
-    public ArrayList<Direction> getAllowedDirection() {
-        return allowedDirection;
     }
 
     public Node getNode() {

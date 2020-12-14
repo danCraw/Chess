@@ -9,11 +9,11 @@ public class MovementService {
     private CheckService check = new CheckService();
     private GameFieldService gf = GameFieldService.getGameFieldService();
     private NodeService nodeService = NodeService.getNodeService();
+    private UnitService unitService = new UnitService();
 
     public void go(Node from, Node to) {
         int amountSteps = getAmountSteps(from, to);
         Direction direction = getDirection(from, to);
-
         int i = 0;
         if (direction == Direction.right) {
             while (i < amountSteps) {
@@ -91,27 +91,38 @@ public class MovementService {
         nodeService.printNode(to);
         Node curr = from;
         Direction direction = getDirection(from, to);
-        System.out.println("фигура " + gf.getNodeToUnitMap().get(from).getUnitType());
-        System.out.println("Направление " + direction);
-        if (!check.canDoStep(from, curr.getNeighbors().get(direction))) {
-            System.err.println("Ход не выполнен");
-            System.out.println();
-//            go(curr, from);
-            doStep(curr.getNeighbors().get(direction), from);
-            return;
-        } else {
-            System.out.println("Ход выполнен");
-            System.out.println();
-            doStep(curr, curr.getNeighbors().get(direction));
+        if (gf.getNodeToUnitMap().get(from) != null) {
+            System.out.println("фигура " + gf.getNodeToUnitMap().get(from).getUnitType());
+            System.out.println("Направление " + direction);
+            if (!check.canDoStep(from, to)) {
+                System.err.println("Ход не выполнен");
+                System.out.println();
+                return;
+            } else {
+                System.out.println("Ход выполнен");
+                System.out.println();
+                doStep(curr, curr.getNeighbors().get(direction));
+            }
         }
     }
 
 
     private void doStep(Node from, Node to) {
-        Unit u = gf.getNodeToUnitMap().get(from);
-        gf.getNodeToUnitMap().put(to, u);
+        Unit unit = gf.getNodeToUnitMap().get(from);
+        System.out.println(unit);
+        gf.getNodeToUnitMap().put(to, unit);
         gf.getNodeToUnitMap().remove(from);
-        gf.getUnitToNodeMap().put(u, to);
+        gf.getUnitToNodeMap().put(unit, to);
+        if (check.isTeam1(unit)) {
+            gf.getTeam1().remove(unit);
+            gf.getNodeToUnitMap().get(to).setCurrentNode(to);
+            gf.getTeam1().add(gf.getNodeToUnitMap().get(to));
+        }
+        if (check.isTeam2(unit)) {
+            gf.getTeam2().remove(unit);
+            gf.getNodeToUnitMap().get(to).setCurrentNode(to);
+            gf.getTeam2().add(gf.getNodeToUnitMap().get(to));
+        }
     }
 
     private Direction getDirection(Node from, Node to) {

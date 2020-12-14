@@ -1,17 +1,15 @@
 package kurs2.oop.task17.service;
 
-import kurs2.oop.task17.Constants;
-import kurs2.oop.task17.Direction;
-import kurs2.oop.task17.Node;
-import kurs2.oop.task17.Unit;
+import kurs2.oop.task17.*;
 
 public class CheckService {
 
     private GameFieldService gf = GameFieldService.getGameFieldService();
 
+
     boolean amountSteps(Node from, Node to) {
-        Unit u = gf.getNodeToUnitMap().get(from);
-        return (Math.abs(from.getNodeX() - to.getNodeX()) <= u.getSteps()) && (Math.abs(from.getNodeY() - to.getNodeY()) <= u.getSteps())
+        UnitType u = gf.getNodeToUnitMap().get(from).getUnitType();
+        return (Math.abs(from.getNodeX() - to.getNodeX()) <= u.getStep()) && (Math.abs(from.getNodeY() - to.getNodeY()) <= u.getStep())
                 && (to.getNodeY() < Constants.HEIGHT)
                 && (to.getNodeY() >= 0)
                 && (to.getNodeX() < Constants.WEIGHT)
@@ -19,7 +17,7 @@ public class CheckService {
     }
 
     private boolean correctAttackDistance(Node from, Node to) {
-        Unit u = gf.getNodeToUnitMap().get(from);
+        UnitType u = gf.getNodeToUnitMap().get(from).getUnitType();
         return (Math.abs(from.getNodeX() - to.getNodeX()) <= u.getAttack()) && (Math.abs(from.getNodeY() - to.getNodeY()) <= u.getAttack())
                 && (to.getNodeY() < Constants.HEIGHT)
                 && (to.getNodeY() >= 0)
@@ -28,13 +26,11 @@ public class CheckService {
     }
 
     boolean canDoAttack(Node from, Node to) {
-//        if (!correctAttackDistance(from, to)) {
-//            System.out.println("одинаковые команды");
-//        }
         return employment(to) && employment(from) && direction(from, to) && !teamAreEqual(from, to) && correctAttackDistance(from, to);
     }
 
     public boolean canDoStep(Node from, Node to) {
+
         return !employment(to) && employment(from) && amountSteps(from, to) && wayIsClear(from, to) && groveType(from, to) && direction(from, to);
     }
 
@@ -43,13 +39,16 @@ public class CheckService {
     }
 
     private boolean groveType(Node from, Node to) {
-
-        return gf.getNodeToUnitMap().get(from).getAllowedGrove().contains(to.getGroveType());
+        if (gf.getNodeToUnitMap().get(from).getUnitType().getAllowedGrove() != null) {
+            return gf.getNodeToUnitMap().get(from).getUnitType().getAllowedGrove().contains(to.getGroveType());
+        } else {
+            return false;
+        }
     }
 
     private boolean direction(Node from, Node to) {
-        if (gf.getNodeToUnitMap().get(from).getAllowedDirection() != null) {
-            return gf.getNodeToUnitMap().get(from).getAllowedDirection().contains(defineDirection(from, to));
+        if (gf.getNodeToUnitMap().get(from).getUnitType().getAllowedDirection() != null) {
+            return gf.getNodeToUnitMap().get(from).getUnitType().getAllowedDirection().contains(defineDirection(from, to));
         } else {
             return false;
         }
@@ -143,11 +142,19 @@ public class CheckService {
         return false;
     }
 
+    public boolean isTeam1(Unit unit) {
+        return  (gf.getTeam1().contains(unit));
+    }
+
+    public boolean isTeam2(Unit unit) {
+        return  (gf.getTeam2().contains(unit));
+    }
+
     private boolean teamAreEqual(Node from, Node to) {
         return gf.getTeam(from).equals(gf.getTeam(to));
     }
 
-    private Direction defineDirection(Node from, Node to) {
+    public Direction defineDirection(Node from, Node to) {
         if (straight(from, to) != null) {
             return straight(from, to);
         }

@@ -1,7 +1,6 @@
 package kurs2.oop.task17.service;
 
 import kurs2.oop.task17.*;
-import kurs2.oop.task17.figure.*;
 
 import java.util.ArrayList;
 import java.util.LinkedList;
@@ -9,26 +8,21 @@ import java.util.Map;
 
 public class GameFieldService {
 
+
     private GameField gf = new GameField();
 
     private static GameFieldService gameFieldService = new GameFieldService();
-
-    private ArrayList<ArrayList<Node>> nodes = gf.getNodes();
 
     private Map<Node, Unit> nodeToUnitMap = gf.getNodeToUnitMap();
     private Map<Unit, Node> unitToNodeMap = gf.getUnitToNodeMap();
 
     private LinkedList<Unit> team1 = new LinkedList<>();
     private LinkedList<Unit> team2 = new LinkedList<>();
+    private Graph graph = new Graph();
+    private ArrayList<ArrayList<Node>> nodes = graph.getNodes();
 
     public GameFieldService() {
-        initField();
         initUnits();
-    }
-
-    private void initField() {
-        buildField();
-        buildNeighbors();
     }
 
     private void initUnits() {
@@ -37,25 +31,26 @@ public class GameFieldService {
     }
 
     private void initTeam1() {
-        Commander commander = new Commander(nodes.get(7).get(0));
-        Infantry infantry1 = new Infantry(nodes.get(3).get(4));
-        Infantry infantry2 = new Infantry(nodes.get(11).get(4));
-        Tank tank1 = new Tank(nodes.get(6).get(3));
-        Tank tank2 = new Tank(nodes.get(8).get(3));
-        Militia militia1 = new Militia(nodes.get(7).get(4));
-        Militia militia2 = new Militia(nodes.get(7).get(2));
-        Engineer engineer1 = new Engineer(nodes.get(4).get(4));
-        Engineer engineer2 = new Engineer(nodes.get(10).get(4));
-        Artillery artillery1 = new Artillery(nodes.get(4).get(2));
-        Artillery artillery2 = new Artillery(nodes.get(10).get(2));
-        AntiPlaneGun antiAircraftGun1 = new AntiPlaneGun(nodes.get(5).get(3));
-        AntiPlaneGun antiAircraftGun2 = new AntiPlaneGun(nodes.get(9).get(3));
-        Ship ship1 = new Ship(nodes.get(1).get(1));
-        Ship ship2 = new Ship(nodes.get(2).get(3));
-        Plane plane1 = new Plane(nodes.get(5).get(1));
-        Plane plane2 = new Plane(nodes.get(9).get(1));
-        Headquarters headquarters1 = new Headquarters(nodes.get(6).get(1));
-        Headquarters headquarters2 = new Headquarters(nodes.get(8).get(1));
+
+        Unit commander = new Unit(nodes.get(8).get(1), UnitType.commander);
+        Unit infantry1 = new Unit(nodes.get(4).get(5), UnitType.infantry);
+        Unit infantry2 = new Unit(nodes.get(12).get(5), UnitType.infantry);
+        Unit tank1 = new Unit(nodes.get(7).get(4), UnitType.tank);
+        Unit tank2 = new Unit(nodes.get(9).get(4), UnitType.tank);
+        Unit militia1 = new Unit(nodes.get(8).get(5), UnitType.militia);
+        Unit militia2 = new Unit(nodes.get(8).get(2), UnitType.militia);
+        Unit engineer1 = new Unit(nodes.get(5).get(5), UnitType.engineer);
+        Unit engineer2 = new Unit(nodes.get(11).get(5), UnitType.engineer);
+        Unit artillery1 = new Unit(nodes.get(5).get(3), UnitType.artillery);
+        Unit artillery2 = new Unit(nodes.get(11).get(3), UnitType.artillery);
+        Unit antiAircraftGun1 = new Unit(nodes.get(6).get(4), UnitType.antiPlaneGun);
+        Unit antiAircraftGun2 = new Unit(nodes.get(10).get(4), UnitType.antiPlaneGun);
+        Unit ship1 = new Unit(nodes.get(2).get(2), UnitType.ship);
+        Unit ship2 = new Unit(nodes.get(3).get(4), UnitType.ship);
+        Unit plane1 = new Unit(nodes.get(6).get(2), UnitType.plane);
+        Unit plane2 = new Unit(nodes.get(10).get(2), UnitType.plane);
+        Unit headquarters1 = new Unit(nodes.get(7).get(2), UnitType.headquarter);
+        Unit headquarters2 = new Unit(nodes.get(9).get(2), UnitType.headquarter);
 
         putUnit(commander, team1);
         putUnit(infantry1, team1);
@@ -79,25 +74,25 @@ public class GameFieldService {
     }
 
     private void initTeam2() {
-        Commander commander = new Commander(nodes.get(7).get(12));
-        Infantry infantry1 = new Infantry(nodes.get(3).get(8));
-        Infantry infantry2 = new Infantry(nodes.get(11).get(8));
-        Tank tank1 = new Tank(nodes.get(6).get(9));
-        Tank tank2 = new Tank(nodes.get(8).get(9));
-        Militia militia1 = new Militia(nodes.get(7).get(10));
-        Militia militia2 = new Militia(nodes.get(7).get(8));
-        Engineer engineer1 = new Engineer(nodes.get(4).get(8));
-        Engineer engineer2 = new Engineer(nodes.get(10).get(8));
-        Artillery artillery1 = new Artillery(nodes.get(4).get(10));
-        Artillery artillery2 = new Artillery(nodes.get(10).get(10));
-        AntiPlaneGun antiAircraftGun1 = new AntiPlaneGun(nodes.get(5).get(9));
-        AntiPlaneGun antiAircraftGun2 = new AntiPlaneGun(nodes.get(9).get(9));
-        Ship ship1 = new Ship(nodes.get(1).get(11));
-        Ship ship2 = new Ship(nodes.get(2).get(9));
-        Plane plane1 = new Plane(nodes.get(5).get(11));
-        Plane plane2 = new Plane(nodes.get(9).get(11));
-        Headquarters headquarters1 = new Headquarters(nodes.get(6).get(11));
-        Headquarters headquarters2 = new Headquarters(nodes.get(8).get(11));
+        Unit commander = new Unit(nodes.get(8).get(13), UnitType.commander);
+        Unit infantry1 = new Unit(nodes.get(4).get(9), UnitType.infantry);
+        Unit infantry2 = new Unit(nodes.get(12).get(9), UnitType.infantry);
+        Unit tank1 = new Unit(nodes.get(7).get(10), UnitType.tank);
+        Unit tank2 = new Unit(nodes.get(9).get(10), UnitType.tank);
+        Unit militia1 = new Unit(nodes.get(8).get(11), UnitType.militia);
+        Unit militia2 = new Unit(nodes.get(8).get(9), UnitType.militia);
+        Unit engineer1 = new Unit(nodes.get(5).get(9), UnitType.engineer);
+        Unit engineer2 = new Unit(nodes.get(11).get(9), UnitType.engineer);
+        Unit artillery1 = new Unit(nodes.get(5).get(11), UnitType.artillery);
+        Unit artillery2 = new Unit(nodes.get(11).get(11), UnitType.artillery);
+        Unit antiAircraftGun1 = new Unit(nodes.get(6).get(10), UnitType.antiPlaneGun);
+        Unit antiAircraftGun2 = new Unit(nodes.get(10).get(10), UnitType.antiPlaneGun);
+        Unit ship1 = new Unit(nodes.get(2).get(12), UnitType.ship);
+        Unit ship2 = new Unit(nodes.get(3).get(10), UnitType.ship);
+        Unit plane1 = new Unit(nodes.get(6).get(12), UnitType.plane);
+        Unit plane2 = new Unit(nodes.get(10).get(12), UnitType.plane);
+        Unit headquarters1 = new Unit(nodes.get(7).get(12), UnitType.headquarter);
+        Unit headquarters2 = new Unit(nodes.get(9).get(12), UnitType.headquarter);
 
         putUnit(commander, team2);
         putUnit(infantry1, team2);
@@ -120,80 +115,10 @@ public class GameFieldService {
         putUnit(headquarters2, team2);
     }
 
-    private void buildField() {
-        createEarth();
-        createRiver();
-        createRiverCross();
-        createSee();
-    }
-
-    private void createEarth() {
-
-        for (int y = 0; y < Constants.HEIGHT + 1; y++) {
-            ArrayList<Node> earth = new ArrayList<>();
-            for (int x = 0; x < Constants.WEIGHT + 2; x++) {
-                earth.add(new Node(x, y, GroveType.earth));
-            }
-            nodes.add(earth);
-        }
-    }
-
-    private void createSee() {
-        for (int y = 0; y < Constants.HEIGHT; y++) {
-            for (int x = 0; x < Constants.WEIGHT; x++) {
-                if (x < 3) {
-                    nodes.get(x).get(y).setGroveType(GroveType.see);
-                }
-            }
-        }
-    }
-
-    private void createRiver() {
-        for (int y = 0; y < Constants.WEIGHT; y++) {
-            for (int x = 0; x < Constants.HEIGHT; x++) {
-                if (y == 6) {
-                    nodes.get(x).get(y).setGroveType(GroveType.river);
-                }
-            }
-        }
-    }
-
-    private void createRiverCross() {
-        for (int y = 0; y < Constants.WEIGHT; y++) {
-            for (int x = 0; x < Constants.HEIGHT; x++) {
-                if (((x == 6) || (x == 8)) && ((y == 6))) {
-                    nodes.get(x).get(y).setGroveType(GroveType.riverCross);
-                }
-            }
-        }
-    }
-
-
     private void putUnit(Unit unit, LinkedList<Unit> units) {
         units.add(unit);
         nodeToUnitMap.put(unit.getNode(), unit);
         unitToNodeMap.put(unit, unit.getNode());
-    }
-
-    private void buildNeighbors() {
-        for (int x = 0; x < Constants.WEIGHT; x++) {
-            for (int y = 0; y < Constants.HEIGHT; y++) {
-                if (x > 0) {
-                    addNeighbor(nodes.get(x).get(y), x - 1, y);
-                    addNeighbor(nodes.get(x).get(y), x - 1, y + 1);
-                }
-                if (y > 0) {
-                    addNeighbor(nodes.get(x).get(y), x + 1, y - 1);
-                    addNeighbor(nodes.get(x).get(y), x, y - 1);
-                }
-                if ((x > 0) && (y > 0)) {
-                    addNeighbor(nodes.get(x).get(y), x - 1, y - 1);
-                }
-                addNeighbor(nodes.get(x).get(y), x + 1, y);
-                addNeighbor(nodes.get(x).get(y), x + 1, y + 1);
-                addNeighbor(nodes.get(x).get(y), x, y + 1);
-            }
-        }
     }
 
     public LinkedList<Unit> getTeam(Node n) {
@@ -207,11 +132,6 @@ public class GameFieldService {
         return null;
     }
 
-    private void addNeighbor(Node curNode, int neighborX, int neighborY) {
-        Direction direction = defineDirection(curNode, nodes.get(neighborX).get(neighborY));
-            curNode.getNeighbors().put(direction, nodes.get(neighborX).get(neighborY));
-    }
-
     private Direction defineDirection(Node from, Node to) {
         if (straight(from, to) != null) {
             return straight(from, to);
@@ -222,7 +142,7 @@ public class GameFieldService {
         return null;
     }
 
-   private Direction diagonal(Node from, Node to) {
+    private Direction diagonal(Node from, Node to) {
         if (Math.abs(from.getNodeX() - to.getNodeX()) != Math.abs(from.getNodeY() - to.getNodeY())) {
             return null;
         }
@@ -241,7 +161,7 @@ public class GameFieldService {
         return null;
     }
 
-   private Direction straight(Node from, Node to) {
+    private Direction straight(Node from, Node to) {
         if ((from.getNodeX() == to.getNodeX()) && (from.getNodeY() < to.getNodeY())) {
             return Direction.up;
         }
@@ -268,35 +188,22 @@ public class GameFieldService {
     }
 
     public int countNavalForce(LinkedList<Unit> team) {
-        int k = 0;
-        for (Unit unit : team) {
-            if ((unit.getUnitType() == UnitType.ship)){
-                k++;
-            }
-        }
-        return k;
+        return countUnitTypeInTeam(team, UnitType.ship);
     }
 
     public int countAirForce(LinkedList<Unit> team) {
-        int k = 0;
-        for (Unit unit : team) {
-            if ((unit.getUnitType() == UnitType.ship)){
-                k++;
-            }
-        }
-        return k;
+        return countUnitTypeInTeam(team, UnitType.plane);
+
     }
 
     public int countEarthForce(LinkedList<Unit> team) {
-        int k = 0;
-        for (Unit unit : team) {
-            if ((unit.getUnitType() == UnitType.infantry) ||
-               (unit.getUnitType() == UnitType.tank) ||
-               (unit.getUnitType() == UnitType.artillery)){
-                k++;
-            }
-        }
-        return k;
+        return  countUnitTypeInTeam(team, UnitType.infantry) +
+                countUnitTypeInTeam(team, UnitType.tank) +
+                countUnitTypeInTeam(team, UnitType.artillery);
+    }
+
+    public int countCommanders(LinkedList<Unit> team) {
+        return countUnitTypeInTeam(team, UnitType.commander);
     }
 
     public Unit getRandomUnit(LinkedList<Unit> team) {
@@ -321,6 +228,10 @@ public class GameFieldService {
 
     public Map<Unit, Node> getUnitToNodeMap() {
         return unitToNodeMap;
+    }
+
+    public Graph getGraph() {
+        return graph;
     }
 
     public static GameFieldService getGameFieldService() {

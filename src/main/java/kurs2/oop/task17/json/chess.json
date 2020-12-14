@@ -1,0 +1,919 @@
+{
+  "graph": {
+    "nodes": [
+      {
+        "coordinateX": 0,
+        "coordinateY": 1,
+        "groveType": "SEE"
+      },
+      {
+        "coordinateX": 0,
+        "coordinateY": 2,
+        "groveType": "SEE"
+      },
+      {
+        "coordinateX": 0,
+        "coordinateY": 3,
+        "groveType": "SEE"
+      },
+      {
+        "coordinateX": 0,
+        "coordinateY": 4,
+        "groveType": "SEE"
+      },
+      {
+        "coordinateX": 0,
+        "coordinateY": 5,
+        "groveType": "SEE"
+      },
+      {
+        "coordinateX": 0,
+        "coordinateY": 6,
+        "groveType": "SEE"
+      },
+      {
+        "coordinateX": 0,
+        "coordinateY": 7,
+        "groveType": "SEE"
+      },
+      {
+        "coordinateX": 0,
+        "coordinateY": 8,
+        "groveType": "SEE"
+      },
+      {
+        "coordinateX": 0,
+        "coordinateY": 9,
+        "groveType": "SEE"
+      },
+      {
+        "coordinateX": 0,
+        "coordinateY": 10,
+        "groveType": "SEE"
+      },
+      {
+        "coordinateX": 0,
+        "coordinateY": 11,
+        "groveType": "SEE"
+      },
+      {
+        "coordinateX": 0,
+        "coordinateY": 12,
+        "groveType": "SEE"
+      },
+      {
+        "coordinateX": 1,
+        "coordinateY": 12,
+        "groveType": "SEE"
+      },
+      {
+        "coordinateX": 1,
+        "coordinateY": 1,
+        "groveType": "SEE"
+      },
+      {
+        "coordinateX": 1,
+        "coordinateY": 2,
+        "groveType": "SEE"
+      },
+      {
+        "coordinateX": 1,
+        "coordinateY": 3,
+        "groveType": "SEE"
+      },
+      {
+        "coordinateX": 1,
+        "coordinateY": 4,
+        "groveType": "SEE"
+      },
+      {
+        "coordinateX": 1,
+        "coordinateY": 5,
+        "groveType": "SEE"
+      },
+      {
+        "coordinateX": 1,
+        "coordinateY": 6,
+        "groveType": "SEE"
+      },
+      {
+        "coordinateX": 1,
+        "coordinateY": 7,
+        "groveType": "SEE"
+      },
+      {
+        "coordinateX": 1,
+        "coordinateY": 8,
+        "groveType": "SEE"
+      },
+      {
+        "coordinateX": 1,
+        "coordinateY": 9,
+        "groveType": "SEE"
+      },
+      {
+        "coordinateX": 1,
+        "coordinateY": 10,
+        "groveType": "SEE"
+      },
+      {
+        "coordinateX": 1,
+        "coordinateY": 11,
+        "groveType": "SEE"
+      },
+      {
+        "coordinateX": 1,
+        "coordinateY": 12,
+        "groveType": "SEE"
+      },
+      {
+        "coordinateX": 2,
+        "coordinateY": 1,
+        "groveType": "SEE"
+      },
+      {
+        "coordinateX": 2,
+        "coordinateY": 2,
+        "groveType": "SEE"
+      },
+      {
+        "coordinateX": 2,
+        "coordinateY": 3,
+        "groveType": "SEE"
+      },
+      {
+        "coordinateX": 2,
+        "coordinateY": 4,
+        "groveType": "SEE"
+      },
+      {
+        "coordinateX": 2,
+        "coordinateY": 5,
+        "groveType": "SEE"
+      },
+      {
+        "coordinateX": 2,
+        "coordinateY": 6,
+        "groveType": "SEE"
+      },
+      {
+        "coordinateX": 2,
+        "coordinateY": 7,
+        "groveType": "SEE"
+      },
+      {
+        "coordinateX": 2,
+        "coordinateY": 8,
+        "groveType": "SEE"
+      },
+      {
+        "coordinateX": 2,
+        "coordinateY": 9,
+        "groveType": "SEE"
+      },
+      {
+        "coordinateX": 2,
+        "coordinateY": 10,
+        "groveType": "SEE"
+      },
+      {
+        "coordinateX": 2,
+        "coordinateY": 11,
+        "groveType": "SEE"
+      },
+      {
+        "coordinateX": 2,
+        "coordinateY": 12,
+        "groveType": "SEE"
+      },
+      {
+        "coordinateX": 3,
+        "coordinateY": 1,
+        "groveType": "EARTH"
+      },
+      {
+        "coordinateX": 3,
+        "coordinateY": 2,
+        "groveType": "EARTH"
+      },
+      {
+        "coordinateX": 3,
+        "coordinateY": 3,
+        "groveType": "EARTH"
+      },
+      {
+        "coordinateX": 3,
+        "coordinateY": 4,
+        "groveType": "EARTH"
+      },
+      {
+        "coordinateX": 3,
+        "coordinateY": 5,
+        "groveType": "EARTH"
+      },
+      {
+        "coordinateX": 3,
+        "coordinateY": 6,
+        "groveType": "EARTH"
+      },
+      {
+        "coordinateX": 3,
+        "coordinateY": 7,
+        "groveType": "EARTH"
+      },
+      {
+        "coordinateX": 3,
+        "coordinateY": 8,
+        "groveType": "EARTH"
+      },
+      {
+        "coordinateX": 3,
+        "coordinateY": 9,
+        "groveType": "EARTH"
+      },
+      {
+        "coordinateX": 3,
+        "coordinateY": 10,
+        "groveType": "EARTH"
+      },
+      {
+        "coordinateX": 3,
+        "coordinateY": 11,
+        "groveType": "EARTH"
+      },
+      {
+        "coordinateX": 3,
+        "coordinateY": 12,
+        "groveType": "EARTH"
+      },
+      {
+        "coordinateX": 4,
+        "coordinateY": 1,
+        "groveType": "EARTH"
+      },
+      {
+        "coordinateX": 4,
+        "coordinateY": 2,
+        "groveType": "EARTH"
+      },
+      {
+        "coordinateX": 4,
+        "coordinateY": 3,
+        "groveType": "EARTH"
+      },
+      {
+        "coordinateX": 4,
+        "coordinateY": 4,
+        "groveType": "EARTH"
+      },
+      {
+        "coordinateX": 4,
+        "coordinateY": 5,
+        "groveType": "EARTH"
+      },
+      {
+        "coordinateX": 4,
+        "coordinateY": 6,
+        "groveType": "EARTH"
+      },
+      {
+        "coordinateX": 4,
+        "coordinateY": 7,
+        "groveType": "EARTH"
+      },
+      {
+        "coordinateX": 4,
+        "coordinateY": 8,
+        "groveType": "EARTH"
+      },
+      {
+        "coordinateX": 4,
+        "coordinateY": 9,
+        "groveType": "EARTH"
+      },
+      {
+        "coordinateX": 4,
+        "coordinateY": 10,
+        "groveType": "EARTH"
+      },
+      {
+        "coordinateX": 4,
+        "coordinateY": 11,
+        "groveType": "EARTH"
+      },
+      {
+        "coordinateX": 4,
+        "coordinateY": 12,
+        "groveType": "EARTH"
+      },
+      {
+        "coordinateX": 5,
+        "coordinateY": 1,
+        "groveType": "EARTH"
+      },
+      {
+        "coordinateX": 5,
+        "coordinateY": 2,
+        "groveType": "EARTH"
+      },
+      {
+        "coordinateX": 5,
+        "coordinateY": 3,
+        "groveType": "EARTH"
+      },
+      {
+        "coordinateX": 5,
+        "coordinateY": 4,
+        "groveType": "EARTH"
+      },
+      {
+        "coordinateX": 5,
+        "coordinateY": 5,
+        "groveType": "EARTH"
+      },
+      {
+        "coordinateX": 5,
+        "coordinateY": 6,
+        "groveType": "EARTH"
+      },
+      {
+        "coordinateX": 5,
+        "coordinateY": 7,
+        "groveType": "EARTH"
+      },
+      {
+        "coordinateX": 5,
+        "coordinateY": 8,
+        "groveType": "EARTH"
+      },
+      {
+        "coordinateX": 5,
+        "coordinateY": 9,
+        "groveType": "EARTH"
+      },
+      {
+        "coordinateX": 5,
+        "coordinateY": 10,
+        "groveType": "EARTH"
+      },
+      {
+        "coordinateX": 5,
+        "coordinateY": 11,
+        "groveType": "EARTH"
+      },
+      {
+        "coordinateX": 5,
+        "coordinateY": 12,
+        "groveType": "EARTH"
+      },
+      {
+        "coordinateX": 6,
+        "coordinateY": 1,
+        "groveType": "EARTH"
+      },
+      {
+        "coordinateX": 6,
+        "coordinateY": 2,
+        "groveType": "EARTH"
+      },
+      {
+        "coordinateX": 6,
+        "coordinateY": 3,
+        "groveType": "EARTH"
+      },
+      {
+        "coordinateX": 6,
+        "coordinateY": 4,
+        "groveType": "EARTH"
+      },
+      {
+        "coordinateX": 6,
+        "coordinateY": 5,
+        "groveType": "EARTH"
+      },
+      {
+        "coordinateX": 6,
+        "coordinateY": 6,
+        "groveType": "EARTH"
+      },
+      {
+        "coordinateX": 6,
+        "coordinateY": 7,
+        "groveType": "EARTH"
+      },
+      {
+        "coordinateX": 6,
+        "coordinateY": 8,
+        "groveType": "EARTH"
+      },
+      {
+        "coordinateX": 6,
+        "coordinateY": 9,
+        "groveType": "EARTH"
+      },
+      {
+        "coordinateX": 6,
+        "coordinateY": 10,
+        "groveType": "EARTH"
+      },
+      {
+        "coordinateX": 6,
+        "coordinateY": 11,
+        "groveType": "EARTH"
+      },
+      {
+        "coordinateX": 6,
+        "coordinateY": 12,
+        "groveType": "EARTH"
+      },
+      {
+        "coordinateX": 7,
+        "coordinateY": 1,
+        "groveType": "EARTH"
+      },
+      {
+        "coordinateX": 7,
+        "coordinateY": 2,
+        "groveType": "EARTH"
+      },
+      {
+        "coordinateX": 7,
+        "coordinateY": 3,
+        "groveType": "EARTH"
+      },
+      {
+        "coordinateX": 7,
+        "coordinateY": 4,
+        "groveType": "EARTH"
+      },
+      {
+        "coordinateX": 7,
+        "coordinateY": 5,
+        "groveType": "EARTH"
+      },
+      {
+        "coordinateX": 7,
+        "coordinateY": 6,
+        "groveType": "EARTH"
+      },
+      {
+        "coordinateX": 7,
+        "coordinateY": 7,
+        "groveType": "EARTH"
+      },
+      {
+        "coordinateX": 7,
+        "coordinateY": 8,
+        "groveType": "EARTH"
+      },
+      {
+        "coordinateX": 7,
+        "coordinateY": 9,
+        "groveType": "EARTH"
+      },
+      {
+        "coordinateX": 7,
+        "coordinateY": 10,
+        "groveType": "EARTH"
+      },
+      {
+        "coordinateX": 7,
+        "coordinateY": 11,
+        "groveType": "EARTH"
+      },
+      {
+        "coordinateX": 7,
+        "coordinateY": 12,
+        "groveType": "EARTH"
+      },
+      {
+        "coordinateX": 8,
+        "coordinateY": 1,
+        "groveType": "EARTH"
+      },
+      {
+        "coordinateX": 8,
+        "coordinateY": 2,
+        "groveType": "EARTH"
+      },
+      {
+        "coordinateX": 8,
+        "coordinateY": 3,
+        "groveType": "EARTH"
+      },
+      {
+        "coordinateX": 8,
+        "coordinateY": 4,
+        "groveType": "EARTH"
+      },
+      {
+        "coordinateX": 8,
+        "coordinateY": 5,
+        "groveType": "EARTH"
+      },
+      {
+        "coordinateX": 8,
+        "coordinateY": 6,
+        "groveType": "EARTH"
+      },
+      {
+        "coordinateX": 8,
+        "coordinateY": 7,
+        "groveType": "EARTH"
+      },
+      {
+        "coordinateX": 8,
+        "coordinateY": 8,
+        "groveType": "EARTH"
+      },
+      {
+        "coordinateX": 8,
+        "coordinateY": 9,
+        "groveType": "EARTH"
+      },
+      {
+        "coordinateX": 8,
+        "coordinateY": 10,
+        "groveType": "EARTH"
+      },
+      {
+        "coordinateX": 8,
+        "coordinateY": 11,
+        "groveType": "EARTH"
+      },
+      {
+        "coordinateX": 8,
+        "coordinateY": 12,
+        "groveType": "EARTH"
+      },
+      {
+        "coordinateX": 9,
+        "coordinateY": 1,
+        "groveType": "EARTH"
+      },
+      {
+        "coordinateX": 9,
+        "coordinateY": 2,
+        "groveType": "EARTH"
+      },
+      {
+        "coordinateX": 9,
+        "coordinateY": 3,
+        "groveType": "EARTH"
+      },
+      {
+        "coordinateX": 9,
+        "coordinateY": 4,
+        "groveType": "EARTH"
+      },
+      {
+        "coordinateX": 9,
+        "coordinateY": 5,
+        "groveType": "EARTH"
+      },
+      {
+        "coordinateX": 9,
+        "coordinateY": 6,
+        "groveType": "EARTH"
+      },
+      {
+        "coordinateX": 9,
+        "coordinateY": 7,
+        "groveType": "EARTH"
+      },
+      {
+        "coordinateX": 9,
+        "coordinateY": 8,
+        "groveType": "EARTH"
+      },
+      {
+        "coordinateX": 9,
+        "coordinateY": 9,
+        "groveType": "EARTH"
+      },
+      {
+        "coordinateX": 9,
+        "coordinateY": 10,
+        "groveType": "EARTH"
+      },
+      {
+        "coordinateX": 9,
+        "coordinateY": 11,
+        "groveType": "EARTH"
+      },
+      {
+        "coordinateX": 9,
+        "coordinateY": 12,
+        "groveType": "EARTH"
+      },
+      {
+        "coordinateX": 10,
+        "coordinateY": 1,
+        "groveType": "EARTH"
+      },
+      {
+        "coordinateX": 10,
+        "coordinateY": 2,
+        "groveType": "EARTH"
+      },
+      {
+        "coordinateX": 10,
+        "coordinateY": 3,
+        "groveType": "EARTH"
+      },
+      {
+        "coordinateX": 10,
+        "coordinateY": 4,
+        "groveType": "EARTH"
+      },
+      {
+        "coordinateX": 10,
+        "coordinateY": 5,
+        "groveType": "EARTH"
+      },
+      {
+        "coordinateX": 10,
+        "coordinateY": 6,
+        "groveType": "EARTH"
+      },
+      {
+        "coordinateX": 10,
+        "coordinateY": 7,
+        "groveType": "EARTH"
+      },
+      {
+        "coordinateX": 10,
+        "coordinateY": 8,
+        "groveType": "EARTH"
+      },
+      {
+        "coordinateX": 10,
+        "coordinateY": 9,
+        "groveType": "EARTH"
+      },
+      {
+        "coordinateX": 10,
+        "coordinateY": 10,
+        "groveType": "EARTH"
+      },
+      {
+        "coordinateX": 10,
+        "coordinateY": 11,
+        "groveType": "EARTH"
+      },
+      {
+        "coordinateX": 10,
+        "coordinateY": 12,
+        "groveType": "EARTH"
+      },
+      {
+        "coordinateX": 11,
+        "coordinateY": 1,
+        "groveType": "EARTH"
+      },
+      {
+        "coordinateX": 11,
+        "coordinateY": 2,
+        "groveType": "EARTH"
+      },
+      {
+        "coordinateX": 11,
+        "coordinateY": 3,
+        "groveType": "EARTH"
+      },
+      {
+        "coordinateX": 11,
+        "coordinateY": 4,
+        "groveType": "EARTH"
+      },
+      {
+        "coordinateX": 11,
+        "coordinateY": 5,
+        "groveType": "EARTH"
+      },
+      {
+        "coordinateX": 11,
+        "coordinateY": 6,
+        "groveType": "EARTH"
+      },
+      {
+        "coordinateX": 11,
+        "coordinateY": 7,
+        "groveType": "EARTH"
+      },
+      {
+        "coordinateX": 11,
+        "coordinateY": 8,
+        "groveType": "EARTH"
+      },
+      {
+        "coordinateX": 11,
+        "coordinateY": 9,
+        "groveType": "EARTH"
+      },
+      {
+        "coordinateX": 11,
+        "coordinateY": 10,
+        "groveType": "EARTH"
+      },
+      {
+        "coordinateX": 11,
+        "coordinateY": 11,
+        "groveType": "EARTH"
+      },
+      {
+        "coordinateX": 11,
+        "coordinateY": 12,
+        "groveType": "EARTH"
+      },
+      {
+        "coordinateX": 12,
+        "coordinateY": 1,
+        "groveType": "EARTH"
+      },
+      {
+        "coordinateX": 12,
+        "coordinateY": 2,
+        "groveType": "EARTH"
+      },
+      {
+        "coordinateX": 12,
+        "coordinateY": 3,
+        "groveType": "EARTH"
+      },
+      {
+        "coordinateX": 12,
+        "coordinateY": 4,
+        "groveType": "EARTH"
+      },
+      {
+        "coordinateX": 12,
+        "coordinateY": 5,
+        "groveType": "EARTH"
+      },
+      {
+        "coordinateX": 12,
+        "coordinateY": 6,
+        "groveType": "EARTH"
+      },
+      {
+        "coordinateX": 12,
+        "coordinateY": 7,
+        "groveType": "EARTH"
+      },
+      {
+        "coordinateX": 12,
+        "coordinateY": 8,
+        "groveType": "EARTH"
+      },
+      {
+        "coordinateX": 12,
+        "coordinateY": 9,
+        "groveType": "EARTH"
+      },
+      {
+        "coordinateX": 12,
+        "coordinateY": 10,
+        "groveType": "EARTH"
+      },
+      {
+        "coordinateX": 12,
+        "coordinateY": 11,
+        "groveType": "EARTH"
+      },
+      {
+        "coordinateX": 12,
+        "coordinateX": 12,
+        "groveType": "EARTH"
+      }
+    ]
+  },
+  "directionsType": {
+    "directions": [
+      {
+        "directionType": "left"
+      },
+      {
+        "directionType": "right"
+      },
+      {
+        "directionType": "up"
+      },
+      {
+        "directionType": "down"
+      },
+      {
+        "directionType": "leftUp"
+      },
+      {
+        "directionType": "leftDown"
+      },
+      {
+        "directionType": "rightUp"
+      },
+      {
+        "directionType": "rightDown"
+      }
+    ]
+  },
+  "groveType": {
+    "grove": [
+      {
+        "groveType": "EARTH"
+      },
+      {
+        "groveType": "RIVER"
+      },
+      {
+        "groveType": "SEE"
+      },
+      {
+        "groveType": "RIVERCROSS"
+      }
+    ]
+  },
+  "fieldSize": {
+    "constants": [
+      {
+        "Width": 12
+      },
+      {
+        "Height": 13
+      }
+    ]
+  },
+  "figures": {
+    "units": [
+      {
+        "unitType": "Tank",
+        "steps": 2,
+        "shot": 2,
+        "allowedGrove": "riverCross, earth, river",
+        "allowedDirection": "up, left, right, down"
+      },
+      {
+        "unitType": "Ship",
+        "steps": 4,
+        "shot": 4,
+        "allowedGrove": "see, river",
+        "allowedDirection": "up, left, right, down, rightDown, leftDown, rightUp, leftUp"
+      },
+      {
+        "unitType": "Plane",
+        "steps": 4,
+        "shot": 4,
+        "allowedGrove": "riverCross, earth, river, see",
+        "allowedDirection": "up, left, right, down, rightDown, leftDown, rightUp, leftUp"
+      },
+      {
+        "unitType": "Militia",
+        "steps": 2,
+        "shot": 2,
+        "allowedGrove": "riverCross, earth, river",
+        "allowedDirection": "up, left, right, down, rightDown, leftDown, rightUp, leftUp"
+      },
+      {
+        "unitType": "Infantry",
+        "steps": 2,
+        "shot": 2,
+        "allowedGrove": "riverCross, earth",
+        "allowedDirection": "up, left, right, down"
+      },
+      {
+        "unitType": "Headquarters",
+        "steps": 0,
+        "shot": 0,
+        "allowedGrove": null,
+        "allowedDirection": null
+      },
+      {
+        "unitType": "Engineer",
+        "steps": 2,
+        "shot": 0,
+        "allowedGrove": "riverCross, earth, river",
+        "allowedDirection": "up, left, right, down"
+      },
+      {
+        "unitType": "Artillery",
+        "steps": 3,
+        "shot": 3,
+        "allowedGrove": "riverCross, earth, river",
+        "allowedDirection": "up, left, right, down, rightDown, leftDown, rightUp, leftUp"
+      },
+      {
+        "unitType": "AntiPlaneGun",
+        "steps": 2,
+        "shot": 1,
+        "allowedGrove": "riverCross, earth, river",
+        "allowedDirection": "up, left, right, down"
+      },
+      {
+        "unitType": "Commander",
+        "steps": 100,
+        "shot": 1,
+        "allowedGrove": "riverCross, earth, river",
+        "allowedDirection": "up, left, right, down"
+      }
+    ]
+  }
+}

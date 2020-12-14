@@ -4,63 +4,70 @@ import kurs2.oop.task17.Node;
 import kurs2.oop.task17.Unit;
 import kurs2.oop.task17.UnitType;
 
-import java.util.HashMap;
 import java.util.LinkedList;
-import java.util.Map;
 
 public class GameService {
-    private GameFieldService gf = GameFieldService.getGameFieldService();
-    private UnitService unitService = new UnitService();
+    LinkedList<LinkedList<Unit>> players = new LinkedList<>();
 
-    Map<Integer, LinkedList<Unit>> playerToTeam = new HashMap<Integer, LinkedList<Unit>>() {{
-        put(1, gf.getTeam1());
-        put(2, gf.getTeam2());
-    }};
+    GameFieldService gf = GameFieldService.getGameFieldService();
+    UnitService unitService = new UnitService();
 
     public void start() {
-        MovementService move = new MovementService();
-        AttackService attack = new AttackService();
-        startBattle(move, attack);
+        MovementService mv = new MovementService();
+        AttackService at = new AttackService();
+        DrawService draw = new DrawService();
+        initPlayers();
+        startGame(mv, at, draw);
+        draw.drawWarZone(gf);
     }
 
-    private void startBattle(MovementService mv, AttackService attackService) {
-        int move = 0;
-        LinkedList<Unit> curTeam;
-        Unit randomUnit;
-        while (move != 100) {
-//            System.err.println(move);
-            for (int player = 1; player <= 2; player++) {
-
-                curTeam = playerToTeam.get(player);
-                randomUnit = gf.getRandomUnit(curTeam);
-                LinkedList<Node> possibleAttack = unitService.getNodesToAttack(randomUnit);
-                LinkedList<Node> possibleWays = unitService.getAllowedNodes(randomUnit);
-
-                if (possibleAttack.size() != 0) {
-                    move++;
-                    Node randomNode = possibleAttack.get(RandomService.interval(0, possibleAttack.size() - 1));
-                    attackService.attack(randomUnit.getNode(), randomNode);
+    private void  startGame(MovementService mv, AttackService at, DrawService draw) {
+        Unit unitToAttack;
+        Unit unitToStep;
+        while (!gameOver()){
+            for (LinkedList<Unit> player : players) {
+                draw.drawWarZone(gf);
+                unitToAttack = findUnitToAttack(player);
+                if (unitToAttack == null) {
+                    unitToStep = findUnitToStep(player);
+                    mv.go(unitToStep.getNode(), unitService.getAllowedNodes(unitToStep).get(RandomService.interval(0, unitService.getAllowedNodes(unitToStep).size() - 1)));
                 } else {
-                    move++;
-                    if (possibleWays.size() != 0 && possibleAttack.size() == 0) {
-                        Node randomNode = possibleWays.get(RandomService.interval(0, possibleWays.size() - 1));
-                        mv.go(randomUnit.getNode(), randomNode);
-                    }
+                    at.attack(unitToAttack.getNode(), unitService.getNodesToAttack(unitToAttack).get(RandomService.interval(0, unitService.getNodesToAttack(unitToAttack).size() - 1)));
                 }
-
             }
         }
-        DrawService d = new DrawService();
-        d.drawWarZone(gf);
+    }
+
+    private Unit findUnitToAttack(LinkedList<Unit> team) {
+        for (Unit unit : team) {
+            if (unitService.getNodesToAttack(unit).size() != 0) {
+                return unit;
+            }
+        }
+        return null;
+    }
+
+    private Unit findUnitToStep(LinkedList<Unit> team){
+        Unit randomUnit = team.get(RandomService.interval(0, team.size() - 1));
+        LinkedList<Node> possibleToStep = unitService.getAllowedNodes(randomUnit);
+        while (possibleToStep.size() == 0) {
+            randomUnit = team.get(RandomService.interval(0, team.size() - 1));
+            possibleToStep = unitService.getAllowedNodes(randomUnit);
+        }
+        return randomUnit;
+    }
+
+    private void initPlayers() {
+        players.add(gf.getTeam1());
+        players.add(gf.getTeam2());
     }
 
     private boolean gameOver() {
         LinkedList<Unit> team1 = gf.getTeam1();
         LinkedList<Unit> team2 = gf.getTeam2();
-        return  !(gf.countNavalForce(team1) > 0 || gf.countNavalForce(team2) > 0) &&
-                !(gf.countAirForce(team1) > 0 || gf.countAirForce(team2) > 0) &&
-                !(gf.countEarthForce(team1) > 0 || gf.countEarthForce(team2) > 0);
+        return (gf.countNavalForce(team1) == 0 || gf.countNavalForce(team2) == 0) ||
+                (gf.countAirForce(team1) == 0 || gf.countAirForce(team2) == 0) ||
+                (gf.countEarthForce(team1) == 0 || gf.countEarthForce(team2) == 0) ||
+                (gf.countCommanders(team1) == 0 || gf.countCommanders(team2) == 0);
     }
-
-
 }
