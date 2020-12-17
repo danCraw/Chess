@@ -1,8 +1,8 @@
 package kurs2.oop.task17.service;
 
-import kurs2.oop.task17.Direction;
-import kurs2.oop.task17.Node;
-import kurs2.oop.task17.Unit;
+import kurs2.oop.task17.model.Direction;
+import kurs2.oop.task17.model.Node;
+import kurs2.oop.task17.model.Unit;
 
 public class MovementService {
 

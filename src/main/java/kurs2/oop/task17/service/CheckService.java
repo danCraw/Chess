@@ -1,6 +1,6 @@
 package kurs2.oop.task17.service;
 
-import kurs2.oop.task17.*;
+import kurs2.oop.task17.model.*;
 
 public class CheckService {
 

@@ -1,4 +1,6 @@
 {
+  "Width": 12,
+  "Height": 13,
   "graph": {
     "nodes": [
       {
@@ -189,62 +191,62 @@
       {
         "coordinateX": 3,
         "coordinateY": 1,
-        "groveType": "EARTH"
+        "groveType": "SEE"
       },
       {
         "coordinateX": 3,
         "coordinateY": 2,
-        "groveType": "EARTH"
+        "groveType": "SEE"
       },
       {
         "coordinateX": 3,
         "coordinateY": 3,
-        "groveType": "EARTH"
+        "groveType": "SEE"
       },
       {
         "coordinateX": 3,
         "coordinateY": 4,
-        "groveType": "EARTH"
+        "groveType": "SEE"
       },
       {
         "coordinateX": 3,
         "coordinateY": 5,
-        "groveType": "EARTH"
+        "groveType": "SEE"
       },
       {
         "coordinateX": 3,
         "coordinateY": 6,
-        "groveType": "EARTH"
+        "groveType": "SEE"
       },
       {
         "coordinateX": 3,
         "coordinateY": 7,
-        "groveType": "EARTH"
+        "groveType": "SEE"
       },
       {
         "coordinateX": 3,
         "coordinateY": 8,
-        "groveType": "EARTH"
+        "groveType": "SEE"
       },
       {
         "coordinateX": 3,
         "coordinateY": 9,
-        "groveType": "EARTH"
+        "groveType": "SEE"
       },
       {
         "coordinateX": 3,
         "coordinateY": 10,
-        "groveType": "EARTH"
+        "groveType": "SEE"
       },
       {
         "coordinateX": 3,
         "coordinateY": 11,
-        "groveType": "EARTH"
+        "groveType": "SEE"
       },
       {
         "coordinateX": 3,
         "coordinateY": 12,
-        "groveType": "EARTH"
+        "groveType": "SEE"
       },
       {
         "coordinateX": 4,
@@ -279,7 +281,7 @@
       {
         "coordinateX": 4,
         "coordinateY": 7,
-        "groveType": "EARTH"
+        "groveType": "RIVER"
       },
       {
         "coordinateX": 4,
@@ -339,7 +341,7 @@
       {
         "coordinateX": 5,
         "coordinateY": 7,
-        "groveType": "EARTH"
+        "groveType": "RIVER"
       },
       {
         "coordinateX": 5,
@@ -399,12 +401,12 @@
       {
         "coordinateX": 6,
         "coordinateY": 7,
-        "groveType": "EARTH"
+        "groveType": "RIVER_CROSS"
       },
       {
         "coordinateX": 6,
         "coordinateY": 8,
-        "groveType": "EARTH"
+        "groveType": "RIVER"
       },
       {
         "coordinateX": 6,
@@ -459,7 +461,7 @@
       {
         "coordinateX": 7,
         "coordinateY": 7,
-        "groveType": "EARTH"
+        "groveType": "RIVER"
       },
       {
         "coordinateX": 7,
@@ -519,7 +521,7 @@
       {
         "coordinateX": 8,
         "coordinateY": 7,
-        "groveType": "EARTH"
+        "groveType": "RIVER_CROSS"
       },
       {
         "coordinateX": 8,
@@ -579,7 +581,7 @@
       {
         "coordinateX": 9,
         "coordinateY": 7,
-        "groveType": "EARTH"
+        "groveType": "RIVER"
       },
       {
         "coordinateX": 9,
@@ -639,7 +641,7 @@
       {
         "coordinateX": 10,
         "coordinateY": 7,
-        "groveType": "EARTH"
+        "groveType": "RIVER"
       },
       {
         "coordinateX": 10,
@@ -699,7 +701,7 @@
       {
         "coordinateX": 11,
         "coordinateY": 7,
-        "groveType": "EARTH"
+        "groveType": "RIVER"
       },
       {
         "coordinateX": 11,
@@ -759,7 +761,7 @@
       {
         "coordinateX": 12,
         "coordinateY": 7,
-        "groveType": "EARTH"
+        "groveType": "RIVER"
       },
       {
         "coordinateX": 12,
@@ -829,16 +831,6 @@
       },
       {
         "groveType": "RIVERCROSS"
-      }
-    ]
-  },
-  "fieldSize": {
-    "constants": [
-      {
-        "Width": 12
-      },
-      {
-        "Height": 13
       }
     ]
   },
@@ -915,5 +907,199 @@
         "allowedDirection": "up, left, right, down"
       }
     ]
+  },
+  "team1" : {
+    "commander": {
+      "currentNodeX": 8,
+      "currentNodeY": 1,
+      "unitType": "COMMANDER"
+    },
+    "infantry1": {
+      "currentNodeX": 4,
+      "currentNodeY": 5,
+      "unitType": "INFANTRY"
+    },
+    "infantry2": {
+      "currentNodeX": 12,
+      "currentNodeY": 5,
+      "unitType": "INFANTRY"
+    },
+    "tank1": {
+      "currentNodeX": 7,
+      "currentNodeY": 4,
+      "unitType": "TANK"
+    },
+    "tank2": {
+      "currentNodeX": 9,
+      "currentNodeY": 4,
+      "unitType": "TANK"
+    },
+    "militia1": {
+      "currentNodeX": 8,
+      "currentNodeY": 5,
+      "unitType": "MILITIA"
+    },
+    "militia2": {
+      "currentNodeX": 8,
+      "currentNodeY": 2,
+      "unitType": "MILITIA"
+    },
+    "engineer1": {
+      "currentNodeX": 5,
+      "currentNodeY": 5,
+      "unitType": "ENGINEER"
+    },
+    "engineer2": {
+      "currentNodeX": 11,
+      "currentNodeY": 5,
+      "unitType": "ENGINEER"
+    },
+    "artillery1": {
+      "currentNodeX": 5,
+      "currentNodeY": 3,
+      "unitType": "ARTILLERY"
+    },
+    "artillery2": {
+      "currentNodeX": 11,
+      "currentNodeY": 3,
+      "unitType": "ARTILLERY"
+    },
+    "antiAircraftGun1": {
+      "currentNodeX": 5,
+      "currentNodeY": 3,
+      "unitType": "ANTI_PLANE_GUN"
+    },
+    "antiAircraftGun2": {
+      "currentNodeX": 11,
+      "currentNodeY": 3,
+      "unitType": "ANTI_PLANE_GUN"
+    },
+    "ship1": {
+      "currentNodeX": 2,
+      "currentNodeY": 2,
+      "unitType": "SHIP"
+    },
+    "ship2": {
+      "currentNodeX": 3,
+      "currentNodeY": 4,
+      "unitType": "SHIP"
+    },
+    "plane1": {
+      "currentNodeX": 6,
+      "currentNodeY": 2,
+      "unitType": "PLANE"
+    },
+    "plane2": {
+      "currentNodeX": 10,
+      "currentNodeY": 2,
+      "unitType": "PLANE"
+    },
+    "headquarters1": {
+      "currentNodeX": 6,
+      "currentNodeY": 2,
+      "unitType": "HEADQUARTER"
+    },
+    "headquarters2": {
+      "currentNodeX": 10,
+      "currentNodeY": 2,
+      "unitType": "HEADQUARTER"
+    }
+  },
+  "team2" : {
+    "commander": {
+      "currentNodeX": 8,
+      "currentNodeY": 13,
+      "unitType": "COMMANDER"
+    },
+    "infantry1": {
+      "currentNodeX": 4,
+      "currentNodeY": 9,
+      "unitType": "INFANTRY"
+    },
+    "infantry2": {
+      "currentNodeX": 12,
+      "currentNodeY": 9,
+      "unitType": "INFANTRY"
+    },
+    "tank1": {
+      "currentNodeX": 7,
+      "currentNodeY": 10,
+      "unitType": "TANK"
+    },
+    "tank2": {
+      "currentNodeX": 9,
+      "currentNodeY": 10,
+      "unitType": "TANK"
+    },
+    "militia1": {
+      "currentNodeX": 8,
+      "currentNodeY": 11,
+      "unitType": "MILITIA"
+    },
+    "militia2": {
+      "currentNodeX": 8,
+      "currentNodeY": 9,
+      "unitType": "MILITIA"
+    },
+    "engineer1": {
+      "currentNodeX": 5,
+      "currentNodeY": 9,
+      "unitType": "ENGINEER"
+    },
+    "engineer2": {
+      "currentNodeX": 11,
+      "currentNodeY": 9,
+      "unitType": "ENGINEER"
+    },
+    "artillery1": {
+      "currentNodeX": 5,
+      "currentNodeY": 11,
+      "unitType": "ARTILLERY"
+    },
+    "artillery2": {
+      "currentNodeX": 11,
+      "currentNodeY": 11,
+      "unitType": "ARTILLERY"
+    },
+    "antiAircraftGun1": {
+      "currentNodeX": 5,
+      "currentNodeY": 10,
+      "unitType": "ANTI_PLANE_GUN"
+    },
+    "antiAircraftGun2": {
+      "currentNodeX": 11,
+      "currentNodeY": 10,
+      "unitType": "ANTI_PLANE_GUN"
+    },
+    "ship1": {
+      "currentNodeX": 2,
+      "currentNodeY": 12,
+      "unitType": "SHIP"
+    },
+    "ship2": {
+      "currentNodeX": 3,
+      "currentNodeY": 10,
+      "unitType": "SHIP"
+    },
+    "plane1": {
+      "currentNodeX": 6,
+      "currentNodeY": 12,
+      "unitType": "PLANE"
+    },
+    "plane2": {
+      "currentNodeX": 10,
+      "currentNodeY": 12,
+      "unitType": "PLANE"
+    },
+    "headquarters1": {
+      "currentNodeX": 6,
+      "currentNodeY": 12,
+      "unitType": "HEADQUARTER"
+    },
+    "headquarters2": {
+      "currentNodeX": 10,
+      "currentNodeY": 12,
+      "unitType": "HEADQUARTER"
+    }
   }
 }

@@ -1,7 +1,5 @@
-package kurs2.oop.task17;
+package kurs2.oop.task17.model;
 
-import kurs2.oop.task17.*;
-import kurs2.oop.task17.service.CheckService;
 import kurs2.oop.task17.service.GraphService;
 
 import java.util.ArrayList;

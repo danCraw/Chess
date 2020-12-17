@@ -1,8 +1,7 @@
 package kurs2.oop.task17.service;
 
-import kurs2.oop.task17.Node;
-import kurs2.oop.task17.Unit;
-import kurs2.oop.task17.UnitType;
+import kurs2.oop.task17.model.Node;
+import kurs2.oop.task17.model.Unit;
 
 import java.util.LinkedList;
 

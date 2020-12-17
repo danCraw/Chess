@@ -1,12 +1,12 @@
 package kurs2.oop.task17.json;
 
 import com.google.gson.*;
-import kurs2.oop.task17.GroveType;
-import kurs2.oop.task17.Node;
+import kurs2.oop.task17.model.GroveType;
+import kurs2.oop.task17.model.Node;
 
 import java.lang.reflect.Type;
 
-public class NodeConverter  implements JsonDeserializer<Node> {
+public class NodeConverter implements JsonDeserializer<Node>, JsonSerializer<Node> {
 
     @Override
     public Node deserialize(JsonElement jsonElement, Type type, JsonDeserializationContext jsonDeserializationContext) throws JsonParseException {
@@ -17,4 +17,12 @@ public class NodeConverter  implements JsonDeserializer<Node> {
         return new Node(x, y, groveType);
     }
 
+    @Override
+    public JsonElement serialize(Node node, Type type, JsonSerializationContext jsonSerializationContext) {
+        JsonObject object = new JsonObject();
+        object.addProperty("groveType", node.getGroveType().toString());
+        object.addProperty("coordinateX", String.valueOf(node.getNodeX()));
+        object.addProperty("coordinateY", String.valueOf(node.getNodeY()));
+        return null;
+    }
 }

@@ -1,4 +1,4 @@
-package kurs2.oop.task17;
+package kurs2.oop.task17.model;
 
 import java.util.HashMap;
 import java.util.Map;

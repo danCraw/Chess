@@ -1,6 +1,6 @@
 package kurs2.oop.task17.service;
 
-import kurs2.oop.task17.*;
+import kurs2.oop.task17.model.*;
 
 import java.util.ArrayList;
 import java.util.LinkedList;
@@ -237,4 +237,5 @@ public class GameFieldService {
     public static GameFieldService getGameFieldService() {
         return gameFieldService;
     }
+
 }

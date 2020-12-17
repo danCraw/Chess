@@ -1,9 +1,8 @@
 package kurs2.oop.task17.service;
 
-import kurs2.oop.task17.Graph;
-import kurs2.oop.task17.Node;
-import kurs2.oop.task17.Unit;
-import org.w3c.dom.ls.LSOutput;
+import kurs2.oop.task17.model.Graph;
+import kurs2.oop.task17.model.Node;
+import kurs2.oop.task17.model.Unit;
 
 public class AttackService {
 

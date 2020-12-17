@@ -1,9 +1,9 @@
 package kurs2.oop.task17.service;
 
-import kurs2.oop.task17.Direction;
-import kurs2.oop.task17.Graph;
-import kurs2.oop.task17.GroveType;
-import kurs2.oop.task17.Node;
+import kurs2.oop.task17.model.Direction;
+import kurs2.oop.task17.model.Graph;
+import kurs2.oop.task17.model.GroveType;
+import kurs2.oop.task17.model.Node;
 
 public class DrawService {
 
@@ -18,16 +18,16 @@ public class DrawService {
                 if (currentNode.getNodeX() == 0 || currentNode.getNodeY() == 0) {
                     drawAsix(currentNode);
                 } else {
-                    if (currentNode.getGroveType() == GroveType.see) {
+                    if (currentNode.getGroveType() == GroveType.SEE) {
                         printSee(gf, currentNode);
                     } else {
-                        if (currentNode.getGroveType() == GroveType.earth) {
+                        if (currentNode.getGroveType() == GroveType.EARTH) {
                             printEarth(gf, currentNode);
                         } else {
-                            if (currentNode.getGroveType() == GroveType.river) {
+                            if (currentNode.getGroveType() == GroveType.RIVER) {
                                 printRiver(gf, currentNode);
                             } else {
-                                if (currentNode.getGroveType() == GroveType.riverCross) {
+                                if (currentNode.getGroveType() == GroveType.RIVER_CROSS) {
                                     printRiverCross(gf, currentNode);
                                 }
                             }

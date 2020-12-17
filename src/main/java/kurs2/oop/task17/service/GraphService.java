@@ -1,9 +1,9 @@
 package kurs2.oop.task17.service;
 
-import kurs2.oop.task17.Constants;
-import kurs2.oop.task17.Direction;
-import kurs2.oop.task17.GroveType;
-import kurs2.oop.task17.Node;
+import kurs2.oop.task17.model.Constants;
+import kurs2.oop.task17.model.Direction;
+import kurs2.oop.task17.model.GroveType;
+import kurs2.oop.task17.model.Node;
 
 import java.util.ArrayList;
 
@@ -55,7 +55,7 @@ public class GraphService {
         for (int y = 0; y < Constants.HEIGHT + 1; y++) {
             ArrayList<Node> earth = new ArrayList<>();
             for (int x = 0; x < Constants.WEIGHT + 2; x++) {
-                earth.add(new Node(x, y, GroveType.earth));
+                earth.add(new Node(x, y, GroveType.EARTH));
             }
             nodes.add(earth);
         }
@@ -65,7 +65,7 @@ public class GraphService {
         for (int y = 0; y < Constants.HEIGHT; y++) {
             for (int x = 0; x < Constants.WEIGHT; x++) {
                 if (x < 4) {
-                    nodes.get(x).get(y).setGroveType(GroveType.see);
+                    nodes.get(x).get(y).setGroveType(GroveType.SEE);
                 }
             }
         }
@@ -75,7 +75,7 @@ public class GraphService {
         for (int y = 0; y < Constants.WEIGHT; y++) {
             for (int x = 0; x < Constants.HEIGHT; x++) {
                 if (y == 7) {
-                    nodes.get(x).get(y).setGroveType(GroveType.river);
+                    nodes.get(x).get(y).setGroveType(GroveType.RIVER);
                 }
             }
         }
@@ -85,7 +85,7 @@ public class GraphService {
         for (int y = 0; y < Constants.WEIGHT; y++) {
             for (int x = 0; x < Constants.HEIGHT; x++) {
                 if (((x == 6) || (x == 8)) && ((y == 7))) {
-                    nodes.get(x).get(y).setGroveType(GroveType.riverCross);
+                    nodes.get(x).get(y).setGroveType(GroveType.RIVER_CROSS);
                 }
             }
         }
